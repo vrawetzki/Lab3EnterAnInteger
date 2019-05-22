@@ -5,6 +5,8 @@ public class Lab3EnterAnInteger {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
+		char userInput = 'y';
+		do {
 		System.out.println("Please enter an interger between 1 and 100");
 
 		int userNum = scan.nextInt();
@@ -27,18 +29,13 @@ public class Lab3EnterAnInteger {
 		}
 		
 		System.out.println("Would you like to continue?");
-		Scanner scan1 = new Scanner(System.in);
+		userInput = scan.next().charAt(0);
+		userInput = Character.toLowerCase(userInput);
 		
-		while(true){
-			Scanner in = null;
-			String line = in.nextLine();
-			    
-			    if(("yes") != null){
-			    }else if(("no") != null){
-			    }else{
-			    }
-
-	}
+		} while(userInput == 'y');
+		System.out.println("goodbye");
+		scan.close();
+		
 
 }
 }
